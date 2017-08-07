@@ -10,28 +10,11 @@
 import numpy as np
 from Week2_PythonLibsanConceptsUsedInResearch.ex.ex2 import create_board, place
 from Week2_PythonLibsanConceptsUsedInResearch.ex.ex3 import possibilities
+def random_place(board, player):
+    possible_placements = possibilities(board)
+    if len(possible_placements) > 0:
+        possible_placements = random.choice(possible_placements)
+        place(board, player, possible_placements)
+    return board
 
-
-def random_place(brd, player):
-    """
-    :param brd: current board status
-    :param player: current player (integer 1 or 2)
-    :return: next brd status
-    """
-    selections = possibilities(brd)
-    if len(selections) > 0:
-        selection = np.random.choice(selections)
-        place(brd, player, selection)
-    return brd
-
-
-if __name__ == '__main__':
-    board = create_board()
-    print('this is board initial setup:')
-    print(board)
-    print('this is place with player1')
-    print(place(board, 1, (0, 0)))
-    # print('these are remaining spaces:')
-    # print(possibilities(board))
-    print('next random move by player 2:')
-    print(random_place(board, 2))
+random_place(board, 2)
