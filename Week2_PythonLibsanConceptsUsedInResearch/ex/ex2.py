@@ -43,23 +43,23 @@ if __name__ == '__main__':
 #  [ 0.  0.  0.]
 #  [ 0.  0.  0.]]
 
-    print(place(board, 1, (0, 1)))
+    #print(place(board, 1, (0, 1)))
 
 # [[ 1.  1.  0.]
 #  [ 0.  0.  0.]
 #  [ 0.  0.  0.]]
 
-    print(place(board, 1, (0, 2)))
+   # print(place(board, 1, (0, 2)))
 
 # [[ 1.  1.  1.]
 #  [ 0.  0.  0.]
 #  [ 0.  0.  0.]]
 
-    print(place(board, 1, (2, 2)))
+  #  print(place(board, 1, (2, 2)))
 
 # [[ 1.  1.  1.]
 #  [ 0.  0.  0.]
 #  [ 0.  0.  1.]]
 
-
+place(board, 1, (0, 0))
 
